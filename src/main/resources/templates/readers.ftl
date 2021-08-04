@@ -63,8 +63,8 @@
                 <td>${reader.desc}</td>
                 <td>${reader.createdAt}</td>
                 <td>${reader.updatedAt}</td>
-                <td><a href="/gui/reader/update/${book.id}"><input type="button" class="btn btn-dark" value="Edit"></a></td>
-                <td><a href="/gui/reader/delete/${book.id}"><input type="button" class="btn btn-danger" value="Delete"></a></td>
+                <td><a href="/gui/reader/update/${reader.id}"><input type="button" class="btn btn-dark" value="Edit"></a></td>
+                <td><a href="/gui/reader/delete/${reader.id}"><input type="button" class="btn btn-danger" value="Delete"></a></td>
             </tr>
         </#list>
     </table>

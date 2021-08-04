@@ -35,9 +35,9 @@
         <label for="exampleInputEmail1" class="form-label">Type</label>
         <select class="form-select" <@spring.formInput "form.type" "" "text"/>
             <option selected></option>
-            <option value="1">Student</option>
-            <option value="2">Pensioner</option>
-            <option value="3">Сommon</option>
+            <option value="student">Student</option>
+            <option value="pensioner">Pensioner</option>
+            <option value="common">Common</option>
         </select>
     </div>
     <div class="mb-3" style="width: 50%">

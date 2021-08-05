@@ -11,6 +11,8 @@ package SSVSEM.repository;
 import SSVSEM.model.Reader;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface ReaderMongoRepository extends MongoRepository<Reader,String> {
+import java.util.List;
 
+public interface ReaderMongoRepository extends MongoRepository<Reader,String> {
+    List<Reader> findByNameAndSurnameAndPatronymic(String name, String surname, String patronymic);
 }

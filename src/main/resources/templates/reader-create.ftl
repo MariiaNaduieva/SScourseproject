@@ -20,7 +20,7 @@
                         <a class="nav-link active" href="/gui/reader/all">Reader</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="/gui/issuedBook/all">Issued Book</a>
                     </li>
                 </ul>
             </div>

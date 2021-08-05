@@ -1,19 +1,16 @@
 package SSVSEM.repository;
 
-import SSVSEM.model.Book;
+import SSVSEM.model.IssuedBook;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 /*
   @author   Mariia Naduieva
   @project   SScourseproject
-  @class  BookMongoRepository
+  @class  IssuedBookMongoRepository
   @version  1.0.0 
-  @since 02.08.2021 - 21.17
+  @since 05.08.2021 - 19.56
 */
 @Repository
-public interface BookMongoRepository extends MongoRepository<Book,String> {
-    List<Book> findByTitle(String title);
+public interface IssuedBookMongoRepository extends MongoRepository<IssuedBook,String> {
 }

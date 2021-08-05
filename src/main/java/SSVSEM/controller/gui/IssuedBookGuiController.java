@@ -13,7 +13,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 /*
@@ -54,6 +56,10 @@ public class IssuedBookGuiController {
     @GetMapping("/create")
     public String create(Model model){
         IssuedBookCreateForm formToCreate = new IssuedBookCreateForm();
+        Map<String, String> booksMap = getBooksMap();
+        Map<String, String> readersMap = getReadersMap();
+        model.addAttribute("readers", readersMap);
+        model.addAttribute("books", booksMap);
         model.addAttribute("form", formToCreate);
         return "issuedBook-create";
     }
@@ -79,6 +85,10 @@ public class IssuedBookGuiController {
     @GetMapping("/update/{id}")
     public String update(Model model, @PathVariable("id") String id){
         IssuedBookUpdateForm formToUpdate = new IssuedBookUpdateForm(service.get(id));
+        Map<String, String> booksMap = getBooksMap();
+        Map<String, String> readersMap = getReadersMap();
+        model.addAttribute("readers", readersMap);
+        model.addAttribute("books", booksMap);
         model.addAttribute("form", formToUpdate);
         return "issuedBook-update";
     }
@@ -98,5 +108,23 @@ public class IssuedBookGuiController {
         issuedBook.setDesc(form.getDesc());
         service.update(issuedBook);
         return "redirect:/gui/issuedBook/all";
+    }
+
+    private Map<String, String> getBooksMap() {
+        Map<String, String> booksMap = new LinkedHashMap<>();
+        List<Book> books = bookMongoRepository.findAll();
+        books.stream()
+                .map(Book::getTitle)
+                .forEach(stringName -> booksMap.put(stringName, stringName));
+        return booksMap;
+    }
+
+    private Map<String, String> getReadersMap() {
+        Map<String, String> readersMap = new LinkedHashMap<>();
+        List<Reader> readers = readerMongoRepository.findAll();
+        readers.stream()
+                .map(reader -> reader.getName() + " " + reader.getSurname() + " " + reader.getPatronymic())
+                .forEach(stringName -> readersMap.put(stringName, stringName));
+        return readersMap;
     }
 }

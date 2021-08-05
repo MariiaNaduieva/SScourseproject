@@ -34,11 +34,11 @@
 <form name="issuedBook" action="" method="POST">
     <div class="mb-3" style="width: 50%">
         <label for="exampleInputEmail1" class="form-label">Book</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" <@spring.formInput "form.book" "" "text"/>
+        <select class="form-select" id="exampleInputEmail1" aria-describedby="emailHelp" <@spring.formSingleSelect "form.book" books ""/>
     </div>
     <div class="mb-3" style="width: 50%">
         <label for="exampleInputEmail1" class="form-label">Reader</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" <@spring.formInput "form.reader" "" "text"/>
+        <select class="form-select" id="exampleInputEmail1" aria-describedby="emailHelp" <@spring.formSingleSelect "form.reader" readers ""/>
     </div>
     <div class="mb-3" style="width: 50%">
         <label for="exampleInputEmail1" class="form-label">Issue Date</label>

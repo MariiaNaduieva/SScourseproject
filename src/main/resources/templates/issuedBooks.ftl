@@ -7,6 +7,14 @@
           rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossorigin="anonymous">
     <title>IssuedBooks</title>
+    <style>
+        hr {
+            border: none;
+            color: transparent;
+            background-color: transparent;
+            height: 1px;
+        }
+    </style>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">Home</a>

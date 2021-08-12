@@ -7,10 +7,19 @@
           rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossorigin="anonymous">
     <title>Readers</title>
+    <style>
+        hr {
+            border: none;
+            color: transparent;
+            background-color: transparent;
+            height: 1px;
+        }
+    </style>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">Home</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -32,7 +41,7 @@
 <body>
 <h1>Table of reader</h1>
 <hr>
-<a href="/gui/reader/create"><input type="button" class="btn btn-success" value="Create" ></a>
+<a href="/gui/reader/create"><input type="button" class="btn btn-success" value="Create"></a>
 <hr>
 <div style="width: 70%">
     <table class="table table-striped">
